@@ -7,6 +7,7 @@ import Location from "../assets/Hero/Location.png";
 import Plans from "../assets/Hero/Plans.png";
 import SearchIcon from "../assets/Hero/Search.png";
 import Nav from "./Nav";
+import Footer from "./Footer";
 
 const Hero = () => {
   const words = ["dentists", "doctors", "therapists", "specialists"];
@@ -140,6 +141,7 @@ const Hero = () => {
           </button>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
