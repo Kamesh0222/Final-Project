@@ -14,7 +14,7 @@ const Footer = () => {
           {/* Zocdoc Column */}
           <div>
             <h3 className="text-white font-semibold mb-4">Zocdoc</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm text-[#9d9898]">
               <li>
                 <a href="#" className="hover:underline">
                   Home
@@ -51,7 +51,7 @@ const Footer = () => {
           {/* Discover Column */}
           <div>
             <h3 className="text-white font-semibold mb-4">Discover</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm text-[#9d9898]">
               <li>
                 <a href="#" className="hover:underline">
                   The Paper Gown
@@ -90,7 +90,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4">
               Insurance Carriers
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm text-[#9d9898]">
               <li>
                 <a href="#" className="hover:underline">
                   Aetna
@@ -197,7 +197,7 @@ const Footer = () => {
           {/* Top Specialties Column */}
           <div>
             <h3 className="text-white font-semibold mb-4">Top Specialties</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm text-[#9d9898]">
               <li>
                 <a href="#" className="hover:underline">
                   Primary Care Doctor
@@ -311,7 +311,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4">
               Are you a top doctor or health service?
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm text-[#9d9898]">
               <li>
                 <a href="#">List your practice on Zocdoc</a>
               </li>
@@ -330,7 +330,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4 mt-6">
               Marketing for your practice
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm text-[#9d9898]">
               <li>
                 <a href="#" className="hover:underline">
                   Dental Marketing
@@ -377,7 +377,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="mt-8 text-sm ml-6">
+      <div className="mt-8 text-sm ml-6 space-y-2 text-[#9d9898]">
         The content provided here and elsewhere on the Zocdoc site or mobile app
         is provided for general informational purposes only. It is not intended
         as, and Zocdoc does not provide, medical advice, diagnosis, or

@@ -3,6 +3,7 @@ import QRCodeImg from "../assets/AppPromo/QRCodeImg.png";
 import AppStoreImg from "../assets/Footer/Apple.png";
 import GooglePlayImg from "../assets/Footer/Android.png";
 import PhoneImg from "../assets/AppPromo/PhoneImg.png";
+import Circle from "../assets/AppPromo/Circle.png";
 
 const AppPromo = () => {
   return (
@@ -51,19 +52,11 @@ const AppPromo = () => {
           />
         </svg>
 
-        <svg
-          width="1054"
-          height="409"
-          viewBox="0 0 1054 409"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="absolute -z-10 bottom-0 -left-56"
-        >
-          <path
-            d="M728.634 39.0536C862.85 92.9629 970.295 198.338 1027.33 331.999C1037.88 356.721 1046.61 382.182 1053.44 408.178H0C5.61949 386.804 12.5195 365.787 20.6627 345.242C74.2128 210.126 178.887 101.96 311.658 44.5379C444.428 -12.8833 594.419 -14.8557 728.634 39.0536Z"
-            fill="#FEED5A"
-          />
-        </svg>
+        <img
+          src={Circle}
+          alt=""
+          className="absolute -z-10 -right-16 bottom-0 w-[70%] h-auto"
+        />
 
         <img
           src={PhoneImg}

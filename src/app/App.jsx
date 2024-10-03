@@ -6,6 +6,10 @@ import Footer from "../components/Footer";
 import AppPromo from "../components/AppPromo";
 import PracticePromo from "../components/PracticePromo";
 import TrustedByHealthSystems from "../components/TrustedByHealthSystems";
+import CityDropdown from "../components/CityDropdown"
+import JobPromo from "../components/JobPromo";
+import VisitReasonDropdown from "../components/VisitReasonDropdown"
+import CreateAccount from "../components/CreateAccount";
 
 
 const App = () => {
@@ -17,7 +21,11 @@ const App = () => {
       <AppPromo />
       <PracticePromo />
       <TrustedByHealthSystems />
+      <CityDropdown />
+      <JobPromo />
+      <VisitReasonDropdown />
       <Footer />
+      {/* <CreateAccount /> */}
     </>
   );
 };
