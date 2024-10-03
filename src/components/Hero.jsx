@@ -6,8 +6,7 @@ import blink from "../assets/Hero/Design.png";
 import Location from "../assets/Hero/Location.png";
 import Plans from "../assets/Hero/Plans.png";
 import SearchIcon from "../assets/Hero/Search.png";
-import Nav from "./Nav";
-import Footer from "./Footer";
+
 
 const Hero = () => {
   const words = ["dentists", "doctors", "therapists", "specialists"];
@@ -24,7 +23,7 @@ const Hero = () => {
 
   return (
     <div>
-      <Nav />
+      
       <section className="bg-yellow-50 py-16 px-4 pb-24 md:px-8 md:pt-10 max-lg:pb-5 relative flex flex-col items-center overflow-hidden">
         {/* Hero Section */}
         <div className="absolute hidden lg:flex top-5 left-[-225px] w-[450px]">
@@ -141,7 +140,7 @@ const Hero = () => {
           </button>
         </div>
       </section>
-      <Footer />
+      
     </div>
   );
 };
