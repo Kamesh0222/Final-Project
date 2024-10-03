@@ -27,7 +27,7 @@ const TrustedByHealthSystems = () => {
           <img
             src={MedStarHealthLogo}
             alt="MedStar Health"
-            className="h-12 w-auto"
+            className="h-14 w-auto"
           />
           <img src={MountSinaiLogo} alt="Mount Sinai" className="h-12 w-auto" />
           <img
