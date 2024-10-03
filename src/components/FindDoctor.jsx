@@ -30,11 +30,11 @@ const features = [
 const FindDoctor = () => {
   return (
     <section className="bg-[#FFF0BB] py-16">
-      <div className="mx-auto flex flex-col">
+      <div className="mx-auto">
         <h2 className="text-center text-2xl mb-36">
           Let’s get you a doc who gets you
         </h2>
-        <div className="flex flex-wrap justify-center gap-8 w-3/4">
+        <div className="flex flex-wrap justify-center gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
