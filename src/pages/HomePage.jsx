@@ -10,7 +10,7 @@ import TrustedByHealthSystems from "../components/TrustedByHealthSystems";
 import CityDropdown from "../components/CityDropdown"
 import JobPromo from "../components/JobPromo";
 import VisitReasonDropdown from "../components/VisitReasonDropdown"
-import CreateAccount from "../components/CreateAccount";
+import CreateAccount from "./Signup";
 
 
 const HomePage = () => {

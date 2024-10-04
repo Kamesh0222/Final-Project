@@ -64,18 +64,12 @@ const citiesData = [
   },
 ];
 
-const CityDropdown = ({ city }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
+const CityDropdown = ({ city, isOpen, toggleDropdown }) => {
   return (
     <div className="flex flex-col pb-4">
       {/* Toggle button */}
       <div
-        className="flex justify-between items-center cursor-pointer text-[#333333] text-base font-extralight pb-4 border-b-[0.5px] m-2 border-gray-700"
+        className="flex justify-between items-center cursor-pointer text-[#333333] text-base font-light pb-4 border-b-[0.5px] m-2 border-gray-700"
         onClick={toggleDropdown}
       >
         <span>{city.name}</span>
@@ -101,7 +95,7 @@ const CityDropdown = ({ city }) => {
       {/* Dropdown content */}
       <div
         className={`transition-all duration-500 ease-in-out overflow-hidden ${
-          isOpen ? "max-h-[500px]" : "max-h-0"
+          isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="mt-2 p-2 w-full flex flex-col space-y-1 max-h-48 overflow-auto border border-gray-300">
@@ -117,6 +111,12 @@ const CityDropdown = ({ city }) => {
 };
 
 const FindDoctorsByCity = () => {
+  const [openCityIndex, setOpenCityIndex] = useState(null);
+
+  const toggleDropdown = (index) => {
+    setOpenCityIndex(openCityIndex === index ? null : index);
+  };
+
   return (
     <section className="bg-[#FFF4C3] py-16 px-6 lg:px-16">
       <h2 className="text-xl font-medium text-[#333333] mb-10">
@@ -124,7 +124,12 @@ const FindDoctorsByCity = () => {
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-6">
         {citiesData.map((city, index) => (
-          <CityDropdown key={index} city={city} />
+          <CityDropdown
+            key={index}
+            city={city}
+            isOpen={openCityIndex === index}
+            toggleDropdown={() => toggleDropdown(index)}
+          />
         ))}
       </div>
     </section>
