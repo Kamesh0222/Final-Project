@@ -23,7 +23,7 @@ const JobPromo = () => {
           <img
             src={JobImage}
             alt="Job Promo"
-            className="absolute -top-[35.7vh]"
+            className="absolute -top-[35.8vh]"
           />
         </div>
       </div>

@@ -22,7 +22,6 @@ const Signup = () => {
           {/* Form */}
           <form>
             <div className="space-y-6">
-              {/* Email */}
               <div>
                 <label
                   htmlFor="email"

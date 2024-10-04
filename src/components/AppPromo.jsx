@@ -7,7 +7,7 @@ import Circle from "../assets/AppPromo/Circle.png";
 
 const AppPromo = () => {
   return (
-    <section className="bg-[#FFC794] relative flex flex-col lg:flex-row justify-between items-center  px-10 lg:px-16 z-0">
+    <section className="bg-[#FFC794] relative flex flex-col lg:flex-row justify-between items-center  px-10 lg:px-16 z-0 overflow-hidden">
       {/* Left Section */}
       <div className="w-full lg:w-1/2 mb-10 lg:mb-0">
         <h2 className="text-xl lg:text-2xl font-extralight text-[#333333] mb-4">
@@ -35,7 +35,7 @@ const AppPromo = () => {
           viewBox="0 0 240 155"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute -z-10 -left-40 top-20"
+          className="absolute -z-10 -left-40 top-20 hidden lg:block"
         >
           <path
             d="M12.627 54.1608C33.3571 37.1751 77.3532 26.9755 100.166 40.0963C129.614 57.0353 114.366 97.9254 84.324 93.2652C67.9147 90.7192 65.2227 75.0788 77.2864 64.1918C99.5574 44.0909 183.492 43.9845 216.737 120.875"
@@ -52,16 +52,24 @@ const AppPromo = () => {
           />
         </svg>
 
-        <img
-          src={Circle}
-          alt=""
-          className="absolute -z-10 -right-16 bottom-0 w-[70%] h-auto"
-        />
+        <svg
+          width="1679"
+          height="650"
+          viewBox="0 0 1679 650"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="absolute -z-10 bottom-0 -left-[70%] h-3/4 hidden lg:block"
+        >
+          <path
+            d="M1161.31 62.1041C1375.23 147.832 1546.48 315.402 1637.39 527.954C1654.2 567.268 1668.11 607.756 1679 649.096H0C8.95647 615.106 19.9539 581.684 32.9327 549.012C118.282 334.147 285.114 162.14 496.727 70.8254C708.338 -20.4874 947.397 -23.6239 1161.31 62.1041Z"
+            fill="#FEED5A"
+          />
+        </svg>
 
         <img
           src={PhoneImg}
           alt="Phone with Zocdoc app"
-          className=" -bottom-72 w-[28rem] lg:w-[45rem] z-10"
+          className=" -bottom-72 w-[28rem] lg:w-[45rem] z-10 hidden lg:block"
         />
       </div>
     </section>

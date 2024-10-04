@@ -18,7 +18,7 @@ const TrustedByHealthSystems = () => {
           <h2 className="text-2xl font-semibold text-[#333333] mb-6">
             We’re trusted by top health systems
           </h2>
-          <button className="bg-[#FFF04B] text-black font-medium py-3 px-6 rounded-md hover:bg-[#FFCC00]">
+          <button className="bg-[#FFF04B] text-black font-medium py-3 px-6 rounded-md hover:bg-[#f7e847]">
             Partner with Zocdoc
           </button>
         </div>
