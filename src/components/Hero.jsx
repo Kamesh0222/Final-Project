@@ -66,7 +66,7 @@ const Hero = () => {
             placeholder="Choose Insurance"
             className="w-1/3"
           />
-          <button className="bg-[#FCE721] relative rounded-full p-3 ml-2 hover:bg-[#fde721] hover:shadow">
+          <button className="bg-[#FCE721] relative rounded-full p-3 ml-2 hover:bg-[#FCE721] hover:bg-opacity-70">
             <img src={SearchIcon} alt="Search icon" className="h-6 w-6" />
             <img
               className="absolute -bottom-5 -right-10 top-5 flex space-x-1"

@@ -39,26 +39,16 @@ const visitReasonsData = [
   },
 ];
 
-const VisitReasonDropdown = ({ reason }) => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
+const VisitReasonAccordion = ({ title, items, isOpen, toggleAccordion }) => {
   return (
-    <div className="relative flex flex-col pb-2">
-      {/* Dropdown Toggle */}
-      <div
-        className="flex justify-between items-center cursor-pointer text-[#333333] text-base font-light pb-4 px-4 border-b-[1px] border-gray-300"
-        onClick={toggleDropdown}
+    <div className=" mb-4">
+      <button
+        onClick={toggleAccordion}
+        className="w-full flex justify-between items-center p-4 focus:outline-none space-x-2 border-b border-1 border-black"
       >
-        <span>{reason.name}</span>
-        <span
-          className={`text-xl transition-transform duration-300 ${
-            isOpen ? "rotate-180" : ""
-          }`}
-        >
+        <span className="text-lg font-medium">{title}</span>
+        {!isOpen ? (
           <svg
             width="17"
             height="25"
@@ -71,36 +61,58 @@ const VisitReasonDropdown = ({ reason }) => {
               fill="#333333"
             />
           </svg>
-        </span>
-      </div>
+        ) : (
+          <svg
+            width="19"
+            height="25"
+            viewBox="0 0 19 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.4755 16.798L17.8831 15.3358L9.75763 7.47248L1.88558 15.5966L3.33836 17.004L9.80276 10.3336L16.4755 16.798Z"
+              fill="#333333"
+            />
+          </svg>
+        )}
+      </button>
 
-      {/* Dropdown Items */}
-      {isOpen && reason.dropdownItems && (
-        <div className="absolute z-10 bg-white mt-2 px-4 py-2 w-[90%] shadow-lg flex flex-col space-y-1 max-h-48 overflow-auto border border-gray-300">
-          {reason.dropdownItems.map((item, index) => (
-            <a
-              href="#"
-              key={index}
-              className="text-sm text-[#333] underline hover:text-black transition"
-            >
-              {item}
-            </a>
-          ))}
+      {/* Smooth transition for dropdown items */}
+      {isOpen && (
+        <div className="transition-all duration-500 ease-in-out">
+          <ul>
+            {items.map((item, index) => (
+              <li key={index} className="underline pl-4 pb-2">
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </div>
   );
 };
 
+// Main component handling visit reason dropdowns
 const CommonVisitReasons = () => {
+  const [openIndex, setOpenIndex] = useState(null); // Track the open accordion's index
+
   return (
     <section className="bg-[#FFF4C3] py-16 px-6 lg:px-16">
       <h2 className="text-xl font-medium text-[#333333] mb-10">
         Common visit reasons
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-4">
         {visitReasonsData.map((reason, index) => (
-          <VisitReasonDropdown key={index} reason={reason} />
+          <VisitReasonAccordion
+            key={reason.name}
+            title={reason.name}
+            items={reason.dropdownItems}
+            isOpen={openIndex === index}
+            toggleAccordion={() =>
+              setOpenIndex(openIndex === index ? null : index)
+            }
+          />
         ))}
       </div>
     </section>

@@ -38,7 +38,7 @@ const FindDoctor = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-[#FDFAEE] rounded-lg p-8 flex flex-col items-center text-center w-full sm:w-80 md:w-96 lg:w-96 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-[#FDFAEE] rounded-lg p-8 flex flex-col items-center text-center w-full sm:w-80 md:w-96 lg:w-96 shadow-lg transition-shadow duration-300"
             >
               <img
                 src={feature.imgSrc}
@@ -47,7 +47,7 @@ const FindDoctor = () => {
               />
               <h3 className="text-lg mb-4">{feature.title}</h3>
               <div className="flex-grow"></div>
-              <button className="px-16 py-3 border border-black rounded-md text-gray-700 hover:bg-gray-100">
+              <button className="px-16 py-3 border border-black rounded-md hover:bg-gray-300 hover:border-2">
                 {feature.buttonText}
               </button>
             </div>
