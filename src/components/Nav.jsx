@@ -17,7 +17,7 @@ const Nav = () => {
           <div className="flex space-x-6">
             {/* Mobile Menu Toggle */}
             <button
-              className="lg:hidden text-gray-700 focus:outline-none"
+              className="lg:hidden text-black focus:outline-none"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Open Menu"
             >
@@ -25,7 +25,7 @@ const Nav = () => {
             </button>
 
             {/* Company Logo */}
-            <img className="h-11 w-28" src={LogoImg} alt="Company Logo" />
+            <img className="h-10 w-28" src={LogoImg} alt="Company Logo" />
           </div>
 
           {/* Desktop Navigation */}
@@ -33,7 +33,7 @@ const Nav = () => {
             <div className="hidden lg:flex items-center space-x-5">
               {/* Browse Button with Modal */}
               <button
-                className="text-gray-700 flex items-center hover:bg-gray-300 hover:bg-opacity-30 px-5 h-12"
+                className="text-black flex items-center hover:bg-gray-300 hover:bg-opacity-30 px-5 h-12 font-extralight"
                 onClick={() => setIsModalOpen(true)}
               >
                 Browse
@@ -44,13 +44,13 @@ const Nav = () => {
 
               <a
                 href="#"
-                className="text-gray-700 flex items-center px-5 h-12 hover:bg-gray-300 hover:bg-opacity-30"
+                className="text-black flex items-center px-5 h-12 hover:bg-gray-300 hover:bg-opacity-30 font-extralight"
               >
                 Help
               </a>
               <a
                 href="#"
-                className="text-gray-700 flex items-center px-5 h-12 hover:bg-gray-300 hover:bg-opacity-30"
+                className="text-black flex items-center px-5 h-12 hover:bg-gray-300 hover:bg-opacity-30 font-extralight"
               >
                 List your practice on Zocdoc
               </a>
@@ -58,7 +58,7 @@ const Nav = () => {
 
               {/* Log in Button */}
               <button
-                className="text-gray-700 px-5 h-12 flex items-center hover:bg-gray-300 hover:bg-opacity-30"
+                className="text-black px-5 h-12 flex items-center hover:bg-gray-300 hover:bg-opacity-30 font-extralight"
                 onClick={() => setIsLoginDropdownOpen(!isLoginDropdownOpen)}
               >
                 Log in
@@ -69,8 +69,8 @@ const Nav = () => {
 
               {/* Sign Up Button */}
               <button
-                className="bg-[#FFF04B] text-black rounded-[4px] px-5 h-12"
-                onClick={() => navigate("/Signup")} // Navigate to Signup page
+                className="bg-[#FFF04B] text-black rounded-[4px] px-5 h-12 font-extralight"
+                onClick={() => navigate("/Signup")} 
               >
                 Sign up
               </button>
@@ -78,16 +78,16 @@ const Nav = () => {
 
             {/* Login Dropdown */}
             {isLoginDropdownOpen && (
-              <div className="absolute top-12 right-44 mt-2 w-2/5 bg-white rounded-md shadow-xl z-50 px-5">
+              <div className="absolute top-12 right-44 mt-2 w-2/5 bg-white rounded-md shadow-xl z-50 px-5 font-extralight">
                 <div className="py-2">
                   <h1 className="text-black font-black py-2">Patients</h1>
                   <a className="hover:bg-gray-100 block py-2 px-2 rounded">
-                    <p className="text-gray-700 font-light py-2">Log in</p>
+                    <p className="text-black font-light py-2">Log in</p>
                   </a>
                   <div className="border-b border-gray-300 my-3"></div>
                   <h1 className="text-black font-black py-2">Doctors</h1>
                   <a className="hover:bg-gray-100 block py-2 px-2 rounded">
-                    <p className="text-gray-700 font-light py-2">Log in</p>
+                    <p className="text-black font-light py-2">Log in</p>
                   </a>
                 </div>
               </div>
@@ -104,7 +104,7 @@ const Nav = () => {
                 />
                 {/* Close Button */}
                 <button
-                  className="absolute top-4 right-4 text-gray-700 focus:outline-none"
+                  className="absolute top-4 right-4 text-black focus:outline-none"
                   onClick={() => setIsMobileMenuOpen(false)}
                   aria-label="Close Menu"
                 >
@@ -125,16 +125,16 @@ const Nav = () => {
                 </button>
 
                 {/* Mobile Menu Content */}
-                <h2 className="text-2xl font-semibold mb-6">
+                <h2 className="text-2xl font-semibold mb-6 ">
                   Welcome to Zocdoc
                 </h2>
                 <button className="bg-yellow-500 text-white px-4 py-2 rounded-full mb-4 hover:bg-yellow-600">
                   Sign up
                 </button>
-                <button className="border border-gray-700 text-gray-700 px-4 py-2 rounded-full mb-4 hover:bg-gray-100">
+                <button className="border border-gray-700 text-black px-4 py-2 rounded-full mb-4 hover:bg-gray-100">
                   Log in
                 </button>
-                <a href="#" className="text-gray-700 hover:text-black mt-4">
+                <a href="#" className="text-black hover:text-black mt-4">
                   Interested in{" "}
                   <span className="underline">listing your practice</span>?
                 </a>
@@ -151,7 +151,7 @@ const Nav = () => {
             <div className="flex justify-between items-center">
               <h2 className="text-xl font-bold">Browse Options</h2>
               <button
-                className="text-gray-700 focus:outline-none"
+                className="text-black focus:outline-none"
                 onClick={() => setIsModalOpen(false)}
               >
                 <svg

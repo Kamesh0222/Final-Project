@@ -1,4 +1,4 @@
-import Aetna from "./Aetna.png";
+import Aetna from "./aetna.png";
 import BlueCross from "./BlueCross.png";
 import Cigna from "./Cigna.png";
 import Medicare from "./Medicare.png";

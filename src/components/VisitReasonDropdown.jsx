@@ -1,44 +1,5 @@
 import React, { useState } from "react";
-
-const visitReasonsData = [
-  {
-    name: "Medical",
-    dropdownItems: [
-      "Physical Exam",
-      "Flu Shot",
-      "Blood Pressure Check",
-      "Other Medical Reason",
-    ],
-  },
-  {
-    name: "Dental",
-    dropdownItems: [
-      "Teeth Cleaning",
-      "Dental Checkup",
-      "Tooth Pain",
-      "Other Dental Reason",
-    ],
-  },
-  {
-    name: "Mental Health",
-    dropdownItems: [
-      "Therapy",
-      "Consultation",
-      "Mental Health Checkup",
-      "Other Mental Health Reason",
-    ],
-  },
-  {
-    name: "Vision",
-    dropdownItems: [
-      "Eye Exam",
-      "Vision Checkup",
-      "Contact Lens Consultation",
-      "Other Vision Reason",
-    ],
-  },
-];
-
+import { visitReasonsData } from "../Data/dbJson.js";
 
 const VisitReasonAccordion = ({ title, items, isOpen, toggleAccordion }) => {
   return (
@@ -95,7 +56,7 @@ const VisitReasonAccordion = ({ title, items, isOpen, toggleAccordion }) => {
 
 // Main component handling visit reason dropdowns
 const CommonVisitReasons = () => {
-  const [openIndex, setOpenIndex] = useState(null); // Track the open accordion's index
+  const [openIndex, setOpenIndex] = useState(null); 
 
   return (
     <section className="bg-[#FFF4C3] py-16 px-6 lg:px-16">
